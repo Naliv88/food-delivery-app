@@ -12,13 +12,13 @@ const { tryCatchWrapper } = require("../../service/catchWrapper");
 const router = express.Router();
 
 // Get all store and foods
-router.get("/", tryCatchWrapper(listStore));
+router.get("/shop", tryCatchWrapper(listStore));
 
 // Get all in cart
 router.get("/cart", tryCatchWrapper(listCartTrue));
 
 // Get a specific food by store
-router.get("/:shop", tryCatchWrapper(getFoodWithStore));
+router.get("/shop/:shop", tryCatchWrapper(getFoodWithStore));
 
 // Update a food by ID
 router.put("/:foodId", tryCatchWrapper(updateFood));
