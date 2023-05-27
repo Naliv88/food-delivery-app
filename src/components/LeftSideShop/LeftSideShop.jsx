@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-import styles from './LeftSideShop.module.css';
+// import styles from './LeftSideShop.module.css';
+import { NotesContext } from 'context/notesContext';
 
 export const LeftSideShop = () => {
+
+
+    const { shops } = useContext(NotesContext);
+
+
   return (
     <>
-      <h3 className={styles.text}>LeftSideShop components</h3>
+    <ul>
+        {shops.map((shop) => ( <li key={shop}><button>{shop}</button></li>))}
+    </ul>
+      
     </>
   );
 };
