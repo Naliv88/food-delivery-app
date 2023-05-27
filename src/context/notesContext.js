@@ -1,5 +1,5 @@
 // У папці "context" містяться файли, пов'язані з контекстом, який використовується для передачі даних між компонентами.
-import React, { createContext, useEffect, useState } from 'react';
+import React, { createContext } from 'react';
 
 
 
