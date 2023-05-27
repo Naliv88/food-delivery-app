@@ -1,0 +1,29 @@
+.header{
+    height: 50px;
+    display: flex;
+    align-items: stretch;
+    
+  font-weight: bold;
+}
+
+.list {
+
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin-left: 30px;
+  }
+  
+  .link {
+    text-decoration: none;
+    margin-right: 10px;
+    padding: auto;
+    transition: color 0.3s ease;
+  }
+  
+  .link:hover {
+    color: #7e1f7e;
+  }
+  
