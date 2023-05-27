@@ -11,11 +11,11 @@ export const NotesProvider = ({ children }) => {
   // Створюємо стейти для зберігання нотаток, поточної нотатки, рядка пошуку, фільтрованого масиву нотаток
   // const [notes, setNotes] = useState([]);
 
-  const [shope, setShope] = useState([]);
+  // const [shope, setShope] = useState([]);
 
 
   // Виконуємо запит до бази даних для отримання всіх shops при монтуванні компонента
-  useEffect(() => {}, [shope]);
+  // useEffect(() => {}, [shope]);
 
   // Оновлюємо фільтрований масив нотаток при зміні рядка пошуку або нотаток
   // useEffect(() => {}, [searchFilter, notes]);
