@@ -8,7 +8,7 @@ import { NotesProvider } from 'context/notesContext';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <NotesProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/food-delivery-app">
         <App />
       </BrowserRouter>
     </NotesProvider>
