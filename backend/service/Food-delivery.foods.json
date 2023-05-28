@@ -1,0 +1,609 @@
+[{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098892"
+  },
+  "name": "Sushi Combo",
+  "description": "Assortment of sushi rolls and sashimi",
+  "price": 18.99,
+  "shop": "Sushi Bar",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098890"
+  },
+  "name": "Bigmack",
+  "description": "Classic pizza with tomato sauce, mozzarella cheese, and basil",
+  "price": 9.99,
+  "shop": "McDonald's",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888c"
+  },
+  "name": "Pizza Margherita",
+  "description": "Classic Italian pizza with tomato sauce, mozzarella cheese, and basil.",
+  "price": 10,
+  "shop": "Pizza House",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": true
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888e"
+  },
+  "name": "Cheeseburger",
+  "description": "Juicy beef patty topped with melted cheese, lettuce, tomato, and special sauce.",
+  "price": 6.99,
+  "shop": "Burger Shack",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": true
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888d"
+  },
+  "name": "Hamburger",
+  "description": "Juicy beef patty with lettuce, tomato, onion, and special sauce in a bun.",
+  "price": 8,
+  "shop": "Burger King",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888f"
+  },
+  "name": "Sushi Combo",
+  "description": "Assortment of fresh sushi rolls with soy sauce and wasabi.",
+  "price": 14.99,
+  "shop": "Sushi Bar",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098891"
+  },
+  "name": "Chicken Burger",
+  "description": "Grilled chicken patty with lettuce, tomato, and mayo",
+  "price": 6.99,
+  "shop": "Burger King",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098892"
+  },
+  "name": "Sushi Combo",
+  "description": "Assortment of sushi rolls and sashimi",
+  "price": 18.99,
+  "shop": "Sushi Bar",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098890"
+  },
+  "name": "Bigmack",
+  "description": "Classic pizza with tomato sauce, mozzarella cheese, and basil",
+  "price": 9.99,
+  "shop": "McDonald's",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888c"
+  },
+  "name": "Pizza Margherita",
+  "description": "Classic Italian pizza with tomato sauce, mozzarella cheese, and basil.",
+  "price": 10,
+  "shop": "Pizza House",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": true
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888e"
+  },
+  "name": "Cheeseburger",
+  "description": "Juicy beef patty topped with melted cheese, lettuce, tomato, and special sauce.",
+  "price": 6.99,
+  "shop": "Burger Shack",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": true
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888d"
+  },
+  "name": "Hamburger",
+  "description": "Juicy beef patty with lettuce, tomato, onion, and special sauce in a bun.",
+  "price": 8,
+  "shop": "Burger King",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888f"
+  },
+  "name": "Sushi Combo",
+  "description": "Assortment of fresh sushi rolls with soy sauce and wasabi.",
+  "price": 14.99,
+  "shop": "Sushi Bar",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098891"
+  },
+  "name": "Chicken Burger",
+  "description": "Grilled chicken patty with lettuce, tomato, and mayo",
+  "price": 6.99,
+  "shop": "Burger King",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098892"
+  },
+  "name": "Sushi Combo",
+  "description": "Assortment of sushi rolls and sashimi",
+  "price": 18.99,
+  "shop": "Sushi Bar",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098890"
+  },
+  "name": "Bigmack",
+  "description": "Classic pizza with tomato sauce, mozzarella cheese, and basil",
+  "price": 9.99,
+  "shop": "McDonald's",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888c"
+  },
+  "name": "Pizza Margherita",
+  "description": "Classic Italian pizza with tomato sauce, mozzarella cheese, and basil.",
+  "price": 10,
+  "shop": "Pizza House",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": true
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888e"
+  },
+  "name": "Cheeseburger",
+  "description": "Juicy beef patty topped with melted cheese, lettuce, tomato, and special sauce.",
+  "price": 6.99,
+  "shop": "Burger Shack",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": true
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888d"
+  },
+  "name": "Hamburger",
+  "description": "Juicy beef patty with lettuce, tomato, onion, and special sauce in a bun.",
+  "price": 8,
+  "shop": "Burger King",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888f"
+  },
+  "name": "Sushi Combo",
+  "description": "Assortment of fresh sushi rolls with soy sauce and wasabi.",
+  "price": 14.99,
+  "shop": "Sushi Bar",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098891"
+  },
+  "name": "Chicken Burger",
+  "description": "Grilled chicken patty with lettuce, tomato, and mayo",
+  "price": 6.99,
+  "shop": "Burger King",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098892"
+  },
+  "name": "Sushi Combo",
+  "description": "Assortment of sushi rolls and sashimi",
+  "price": 18.99,
+  "shop": "Sushi Bar",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098890"
+  },
+  "name": "Bigmack",
+  "description": "Classic pizza with tomato sauce, mozzarella cheese, and basil",
+  "price": 9.99,
+  "shop": "McDonald's",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888c"
+  },
+  "name": "Pizza Margherita",
+  "description": "Classic Italian pizza with tomato sauce, mozzarella cheese, and basil.",
+  "price": 10,
+  "shop": "Pizza House",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": true
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888e"
+  },
+  "name": "Cheeseburger",
+  "description": "Juicy beef patty topped with melted cheese, lettuce, tomato, and special sauce.",
+  "price": 6.99,
+  "shop": "Burger Shack",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": true
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888d"
+  },
+  "name": "Hamburger",
+  "description": "Juicy beef patty with lettuce, tomato, onion, and special sauce in a bun.",
+  "price": 8,
+  "shop": "Burger King",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888f"
+  },
+  "name": "Sushi Combo",
+  "description": "Assortment of fresh sushi rolls with soy sauce and wasabi.",
+  "price": 14.99,
+  "shop": "Sushi Bar",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098891"
+  },
+  "name": "Chicken Burger",
+  "description": "Grilled chicken patty with lettuce, tomato, and mayo",
+  "price": 6.99,
+  "shop": "Burger King",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098892"
+  },
+  "name": "Sushi Combo",
+  "description": "Assortment of sushi rolls and sashimi",
+  "price": 18.99,
+  "shop": "Sushi Bar",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098890"
+  },
+  "name": "Bigmack",
+  "description": "Classic pizza with tomato sauce, mozzarella cheese, and basil",
+  "price": 9.99,
+  "shop": "McDonald's",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888c"
+  },
+  "name": "Pizza Margherita",
+  "description": "Classic Italian pizza with tomato sauce, mozzarella cheese, and basil.",
+  "price": 10,
+  "shop": "Pizza House",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": true
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888e"
+  },
+  "name": "Cheeseburger",
+  "description": "Juicy beef patty topped with melted cheese, lettuce, tomato, and special sauce.",
+  "price": 6.99,
+  "shop": "Burger Shack",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": true
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888d"
+  },
+  "name": "Hamburger",
+  "description": "Juicy beef patty with lettuce, tomato, onion, and special sauce in a bun.",
+  "price": 8,
+  "shop": "Burger King",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888f"
+  },
+  "name": "Sushi Combo",
+  "description": "Assortment of fresh sushi rolls with soy sauce and wasabi.",
+  "price": 14.99,
+  "shop": "Sushi Bar",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098891"
+  },
+  "name": "Chicken Burger",
+  "description": "Grilled chicken patty with lettuce, tomato, and mayo",
+  "price": 6.99,
+  "shop": "Burger King",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098892"
+  },
+  "name": "Sushi Combo",
+  "description": "Assortment of sushi rolls and sashimi",
+  "price": 18.99,
+  "shop": "Sushi Bar",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098890"
+  },
+  "name": "Bigmack",
+  "description": "Classic pizza with tomato sauce, mozzarella cheese, and basil",
+  "price": 9.99,
+  "shop": "McDonald's",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888c"
+  },
+  "name": "Pizza Margherita",
+  "description": "Classic Italian pizza with tomato sauce, mozzarella cheese, and basil.",
+  "price": 10,
+  "shop": "Pizza House",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": true
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888e"
+  },
+  "name": "Cheeseburger",
+  "description": "Juicy beef patty topped with melted cheese, lettuce, tomato, and special sauce.",
+  "price": 6.99,
+  "shop": "Burger Shack",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": true
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888d"
+  },
+  "name": "Hamburger",
+  "description": "Juicy beef patty with lettuce, tomato, onion, and special sauce in a bun.",
+  "price": 8,
+  "shop": "Burger King",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888f"
+  },
+  "name": "Sushi Combo",
+  "description": "Assortment of fresh sushi rolls with soy sauce and wasabi.",
+  "price": 14.99,
+  "shop": "Sushi Bar",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098891"
+  },
+  "name": "Chicken Burger",
+  "description": "Grilled chicken patty with lettuce, tomato, and mayo",
+  "price": 6.99,
+  "shop": "Burger King",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098892"
+  },
+  "name": "Sushi Combo",
+  "description": "Assortment of sushi rolls and sashimi",
+  "price": 18.99,
+  "shop": "Sushi Bar",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098890"
+  },
+  "name": "Bigmack",
+  "description": "Classic pizza with tomato sauce, mozzarella cheese, and basil",
+  "price": 9.99,
+  "shop": "McDonald's",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888c"
+  },
+  "name": "Pizza Margherita",
+  "description": "Classic Italian pizza with tomato sauce, mozzarella cheese, and basil.",
+  "price": 10,
+  "shop": "Pizza House",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": true
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888e"
+  },
+  "name": "Cheeseburger",
+  "description": "Juicy beef patty topped with melted cheese, lettuce, tomato, and special sauce.",
+  "price": 6.99,
+  "shop": "Burger Shack",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": true
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888d"
+  },
+  "name": "Hamburger",
+  "description": "Juicy beef patty with lettuce, tomato, onion, and special sauce in a bun.",
+  "price": 8,
+  "shop": "Burger King",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888f"
+  },
+  "name": "Sushi Combo",
+  "description": "Assortment of fresh sushi rolls with soy sauce and wasabi.",
+  "price": 14.99,
+  "shop": "Sushi Bar",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098891"
+  },
+  "name": "Chicken Burger",
+  "description": "Grilled chicken patty with lettuce, tomato, and mayo",
+  "price": 6.99,
+  "shop": "Burger King",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098892"
+  },
+  "name": "Sushi Combo",
+  "description": "Assortment of sushi rolls and sashimi",
+  "price": 18.99,
+  "shop": "Sushi Bar",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098890"
+  },
+  "name": "Bigmack",
+  "description": "Classic pizza with tomato sauce, mozzarella cheese, and basil",
+  "price": 9.99,
+  "shop": "McDonald's",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888c"
+  },
+  "name": "Pizza Margherita",
+  "description": "Classic Italian pizza with tomato sauce, mozzarella cheese, and basil.",
+  "price": 10,
+  "shop": "Pizza House",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": true
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888e"
+  },
+  "name": "Cheeseburger",
+  "description": "Juicy beef patty topped with melted cheese, lettuce, tomato, and special sauce.",
+  "price": 6.99,
+  "shop": "Burger Shack",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": true
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888d"
+  },
+  "name": "Hamburger",
+  "description": "Juicy beef patty with lettuce, tomato, onion, and special sauce in a bun.",
+  "price": 8,
+  "shop": "Burger King",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a809888f"
+  },
+  "name": "Sushi Combo",
+  "description": "Assortment of fresh sushi rolls with soy sauce and wasabi.",
+  "price": 14.99,
+  "shop": "Sushi Bar",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+},
+{
+  "_id": {
+    "$oid": "646fabf1ec9d1386a8098891"
+  },
+  "name": "Chicken Burger",
+  "description": "Grilled chicken patty with lettuce, tomato, and mayo",
+  "price": 6.99,
+  "shop": "Burger King",
+  "imageUrl": "https://tn.fishki.net/26/upload/post/2022/12/27/4326899/837df8d4e48727bde66b082e3727808e.jpg",
+  "cart": false
+}]

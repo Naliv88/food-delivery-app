@@ -10,7 +10,7 @@ export const Header = () => {
     <header className={style.header}>
       <ul className={style.list}>
         {navLinks.map((link) => (
-          <li key={link.id}>
+          <li key={link.text}>
             <NavLink
               to={link.path}
               className={style.link}

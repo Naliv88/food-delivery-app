@@ -1,0 +1,19 @@
+
+.rightSideShop {
+    display: flex;
+    flex: 3;
+    overflow: auto; /* Добавлено свойство overflow */
+  max-height: 90vh; /* Пример значения высоты */
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    
+  }
+  

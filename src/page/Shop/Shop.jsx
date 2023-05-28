@@ -1,11 +1,13 @@
 import { LeftSideShop } from 'components/LeftSideShop/LeftSideShop';
+import { RightSideShop } from 'components/RightSideShop/RightSideShop';
 import React from 'react';
-// import style from './Shop.module.css'
+import styles from './Shop.module.css'
 
 export const Shop = () => {
   return (
-   <div>
+   <div className={styles.work}>
     <LeftSideShop/>
+    <RightSideShop/>
    </div>
   );
 };

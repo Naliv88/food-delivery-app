@@ -1,8 +1,8 @@
 
 import React, { createContext, useEffect, useState } from 'react';
 
-import fetchShopsListFromAPI from '../Axios/AxiosGetCategories'
-
+import fetchShopsListFromAPI from '../Axios/AxiosGetShops'
+import fetchFoodsListFromAPI from '../Axios/AxiosGetFood'
 
 
 // Створюємо контекст для передачі даних між компонентами
@@ -10,10 +10,12 @@ export const NotesContext = createContext();
 
 // Створюємо провайдер для забезпечення доступу до даних в контексті
 export const NotesProvider = ({ children }) => {
-  // Створюємо стейти для зберігання нотаток, поточної нотатки, рядка пошуку, фільтрованого масиву нотаток
-  // const [notes, setNotes] = useState([]);
+  // Створюємо стейти для зберігання
 
   const [shops, setShops] = useState([]);
+  const [currentShop, setCurrentShop] = useState('');
+  const [foods, setfoods] = useState([]);
+  console.log(currentShop);
 
 
   // Виконуємо запит до бази даних для отримання всіх shops при монтуванні компонента
@@ -21,8 +23,8 @@ export const NotesProvider = ({ children }) => {
     const fetchData = async () => {
       try {
         const data = await fetchShopsListFromAPI();
-        console.log(data);
         setShops(data);
+        setCurrentShop(data[0])
       } catch (error) {
         console.error(error);
       }
@@ -33,7 +35,18 @@ export const NotesProvider = ({ children }) => {
   
 
   // Оновлюємо фільтрований масив нотаток при зміні рядка пошуку або нотаток
-  // useEffect(() => {}, [searchFilter, notes]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await fetchFoodsListFromAPI(currentShop);
+        setfoods(data)
+      } catch (error) {
+        console.error(error);
+      }
+    };
+  
+    fetchData();
+  }, [currentShop]);
 
   // Оновлюємо фільтрований масив нотаток при зміні рядка пошуку або нотаток
   // const filteredNotesMemo = useMemo(() => {
@@ -48,8 +61,11 @@ export const NotesProvider = ({ children }) => {
     <NotesContext.Provider
       value={{
         shops,
-       
-      }}
+        setCurrentShop,
+        currentShop,
+        foods,
+
+      }} displayName="Context"
     >
       {children}
     </NotesContext.Provider>
