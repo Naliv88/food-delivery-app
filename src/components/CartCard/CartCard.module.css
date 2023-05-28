@@ -1,0 +1,7 @@
+.text{
+    background: red;
+}
+.cartCard_container{
+    display: flex;
+    margin: 10px;
+}
