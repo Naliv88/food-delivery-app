@@ -1,68 +1,67 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import CartCard from '../../components/CartCard/CartCard';
 import fetchCartListFromAPI from '../../Axios/AxiosGetCart';
+import Customer from 'components/Customer/Customer';
+import fetchdeleteFromCart from '../../Axios/AxiosPutCart';
+
+import styles from './ShoppingCart.module.css';
 
 export const ShoppingCart = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [address, setAddress] = useState('');
   const [cartItems, setCartItems] = useState([]);
+  const [order, setOrder] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    address: '',
+  });
 
   const fetchData = async () => {
     try {
       const data = await fetchCartListFromAPI();
       console.log(data);
-      setCartItems(data);
+      return data;
     } catch (error) {
       console.error(error);
     }
   };
 
-  useEffect(() => {
-    fetchData();
+  const fetchDataAndSetCartItems = useCallback(async () => {
+    const cartOrder = await fetchData();
+    const cartsOrderQ = cartOrder.map(({ shop, _id, price, imageUrl }) => ({
+      imageUrl,
+      shop,
+      idFood: _id,
+      quantity: 1,
+      price: price,
+    }));
+    setCartItems(cartsOrderQ);
   }, []);
+
+  useEffect(() => {
+    fetchDataAndSetCartItems();
+  }, [fetchDataAndSetCartItems]);
 
   const handleChange = (event, setValue) => {
     setValue(event.target.value);
   };
 
-  const handleOrder = event => {
-    event.preventDefault();
-
-    // Perform order processing logic here
-    console.log('Order placed:', {
-      name,
-      email,
-      phone,
-      address,
-      cartItems,
-    });
-
-    // Clear the form and cart items
-    setName('');
-    setEmail('');
-    setPhone('');
-    setAddress('');
-    setCartItems([]);
-  };
-
   const handleRemoveFromCart = itemId => {
-    setCartItems(prevItems => prevItems.filter(item => item.id !== itemId));
+    setCartItems(prevItems => prevItems.filter(item => item.idFood !== itemId));
+    fetchdeleteFromCart(itemId);
   };
 
   const calculateTotalPrice = () => {
-    return cartItems.reduce(
+    const totalPrice = cartItems.reduce(
       (total, item) => total + item.price * item.quantity,
       0
     );
+    return totalPrice.toFixed(2);
   };
 
-  // Обработчик обновления количества элемента в корзине
   const handleUpdateQuantity = (itemId, newQuantity) => {
     setCartItems(prevItems =>
       prevItems.map(item => {
-        if (item.id === itemId) {
+        if (item.idFood === itemId) {
           return { ...item, quantity: newQuantity };
         }
         return item;
@@ -70,55 +69,39 @@ export const ShoppingCart = () => {
     );
   };
 
+  const handleOrder = event => {
+    event.preventDefault();
+
+    const { name, email, phone, address } = event.target;
+
+    const newOrder = {
+      name: name.value,
+      email: email.value,
+      phone: phone.value,
+      address: address.value,
+      orders: [...cartItems],
+    };
+
+    setOrder(newOrder);
+  };
+
+  useEffect(() => {
+    console.log('Order placed:', order);
+  }, [order]);
+
   return (
     <div>
-      <form onSubmit={handleOrder}>
+      <form onSubmit={handleOrder} className={styles.shoppingCart_form}>
         <div>
-          <h2>Customer Details</h2>
-          <div>
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              value={name}
-              onChange={(event) => handleChange(event, setName)}
-            />
-          </div>
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(event) => handleChange(event, setEmail)}
-            />
-          </div>
-          <div>
-            <label htmlFor="phone">Phone:</label>
-            <input
-              type="text"
-              id="phone"
-              value={phone}
-              onChange={(event) => handleChange(event, setPhone)}
-            />
-          </div>
-          <div>
-            <label htmlFor="address">Address:</label>
-            <input
-              type="text"
-              id="address"
-              value={address}
-              onChange={(event) => handleChange(event, setAddress)}
-            />
-          </div>
+          <Customer handleChange={handleChange} order={order} />
         </div>
-        <div>
-          <h2>Cart Items</h2>
+        <div className={styles.shoppingCart_cart_list}>
+          <h3>Cart Items</h3>
           {cartItems.length > 0 ? (
-            <div>
+            <div className={styles.shoppingCart_cart_item}>
               {cartItems.map(item => (
                 <CartCard
-                  key={item.id}
+                  key={item.idFood}
                   item={item}
                   onRemove={handleRemoveFromCart}
                   onUpdateQuantity={handleUpdateQuantity}
@@ -128,9 +111,14 @@ export const ShoppingCart = () => {
           ) : (
             <p>No items in the cart</p>
           )}
-          <div>
+          <div className={styles.shoppingCart_total_price}>
             <h3>Total Price: ${calculateTotalPrice()}</h3>
-            <button type="submit">Place Order</button>
+            <button
+              type="submit"
+              className={styles.shoppingCart_place_order_button}
+            >
+              Place Order
+            </button>
           </div>
         </div>
       </form>

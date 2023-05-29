@@ -8,9 +8,14 @@ import fetchCartListFromAPI from '../../Axios/AxiosPatchCart';
 export const RightSideShop = () => {
   const { foods } = useContext(NotesContext);
 
-  function handleCart(id) {
-    console.log(`Clicked Add to Cart. Food ID: ${id}`);
-    fetchCartListFromAPI(id)
+  async function handleCart(id) {
+    try {
+      
+      await fetchCartListFromAPI(id);
+      console.log(`Clicked Add to Cart. Food ID: ${id}`);
+    } catch (error) {
+      console.error('Error adding item to cart:', error);
+    }
   }
 
   return (

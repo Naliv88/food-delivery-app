@@ -1,41 +1,44 @@
-import React, { useState } from 'react';
-import styles from "./CartCard.module.css"
+import React from 'react';
+import styles from './CartCard.module.css';
 
 const CartCard = ({ item, onRemove, onUpdateQuantity }) => {
-  const { id, imageUrl, name, price, quantity } = item;
-  const [updatedQuantity, setUpdatedQuantity] = useState(quantity);
-
-  const handleRemove = () => {
-    onRemove(id);
-  };
-
-  const handleQuantityChange = (event) => {
+  const handleQuantityChange = event => {
     const newQuantity = parseInt(event.target.value);
-    setUpdatedQuantity(newQuantity);
-    onUpdateQuantity(id, newQuantity);
+    onUpdateQuantity(item.idFood, +newQuantity);
   };
 
   return (
-    <div className={styles.cartCard_container}>
-      <img src={imageUrl} alt={name} width="200px" />
-      <div>
-        <h3>{name}</h3>
-        <p>Price: ${price}</p>
-        <label htmlFor="quantity">Quantity:</label>
-          <input
-            type="number"
-            id="quantity"
-            value={updatedQuantity}
-            onChange={handleQuantityChange}
-            min="1"
-          />
-        
-        <button onClick={handleRemove}>Remove</button>
+    <div className={styles['cart-card']}>
+      <img
+        src={item.imageUrl}
+        alt={item.name}
+        className={styles['cart-card-image']}
+      />
+      <div className={styles['cart-card_disc']}>
+        <h4 className={styles['cart-card-name']}>{item.name}</h4>
+        <p className={styles['cart-card-price']}>Price: ${item.price}</p>
+
+        <label htmlFor={`${item.idFood}`} className={styles['cart-card-label']}>
+          Quantity:
+        </label>
+        <input
+          type="number"
+          id={`${item.idFood}`}
+          value={item.quantity}
+          min="1"
+          onChange={handleQuantityChange}
+          className={styles['cart-card-quantity']}
+        />
+
+        <button
+          onClick={() => onRemove(item.idFood)}
+          className={styles['cart-card-button']}
+        >
+          Remove
+        </button>
       </div>
     </div>
   );
 };
 
 export default CartCard;
-
-

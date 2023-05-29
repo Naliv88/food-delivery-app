@@ -64,8 +64,28 @@ const addCartFood = async (req, res) => {
       return res.status(404).json({ message: 'Food not found' });
     }
 
-    // Toggle the cart status
     food.cart = !food.cart;
+
+    const updatedFood = await food.save();
+
+    res.status(200).json(updatedFood);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Failed to update cart status' });
+  }
+};
+
+const addCartFoodFalse = async (req, res) => {
+  const { foodId } = req.params;
+
+  try {
+    const food = await Food.findById(foodId);
+
+    if (!food) {
+      return res.status(404).json({ message: 'Food not found' });
+    }
+
+    food.cart = false;
 
     const updatedFood = await food.save();
 
@@ -97,5 +117,6 @@ module.exports = {
   getFoodWithStore,
   updateFood,
   addCartFood,
-  listCartTrue
+  listCartTrue,
+  addCartFoodFalse
 };

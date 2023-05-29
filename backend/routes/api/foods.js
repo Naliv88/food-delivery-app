@@ -6,6 +6,7 @@ const {
   updateFood,
   addCartFood,
   listCartTrue,
+  addCartFoodFalse,
 } = require("../../controllers/foods");
 const { tryCatchWrapper } = require("../../service/catchWrapper");
 
@@ -25,5 +26,8 @@ router.put("/:foodId", tryCatchWrapper(updateFood));
 
 // Update a cart status in food by ID
 router.patch("/cart/:foodId", tryCatchWrapper(addCartFood));
+
+// Update a cart status in false food by ID
+router.put("/cart/:foodId", tryCatchWrapper(addCartFoodFalse));
 
 module.exports = router;

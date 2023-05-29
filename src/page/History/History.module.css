@@ -1,0 +1,59 @@
+/* History.module.css */
+
+.history_container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .history_list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .history_item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .item_image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .item_details {
+    flex-grow: 1;
+  }
+  
+  .item_title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .item_description {
+    margin-bottom: 5px;
+  }
+  
+  .item_price {
+    font-size: 16px;
+  }
+  
+  .item_date {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .no_history {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+  }
+  

@@ -6,7 +6,7 @@ export const ShopCard = ({ food, onClick }) => {
   const [isCart, setIsCart] = useState(cart);
 
   const handleCartClick = () => {
-    setIsCart(!isCart);
+    setIsCart(prevstate=> !prevstate);
     onClick(_id);
   };
 
