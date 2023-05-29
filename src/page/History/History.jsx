@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import HistoryItem from '../../components/HistoryItem/HistoryItem';
 // import fetchHistoryData from '../../Axios/AxiosGetHistory';
 import styles from './History.module.css';
 
 export const History = () => {
-  const [historyData, setHistoryData] = useState([]);
+const historyData=[];
+
+  // const [historyData, setHistoryData] = useState([]);
 
   // useEffect(() => {
   //   const fetchHistory = async () => {

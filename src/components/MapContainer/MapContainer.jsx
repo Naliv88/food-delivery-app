@@ -4,7 +4,9 @@ import { Map, Marker, GoogleApiWrapper } from 'google-maps-react';
 const MapContainer = ({ google }) => {
   const [userAddress, setUserAddress] = useState('');
   const [userLocation, setUserLocation] = useState(null);
-  const [shopLocation, setShopLocation] = useState(null);
+//   const [shopLocation, setShopLocation] = useState(null);
+
+const shopLocation=null
 
   const handleMapClick = (mapProps, map, clickEvent) => {
     const { latLng } = clickEvent;
