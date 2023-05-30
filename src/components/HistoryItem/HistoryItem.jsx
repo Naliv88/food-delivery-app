@@ -2,16 +2,20 @@ import React from 'react';
 import styles from './HistoryItem.module.css';
 
 const HistoryItem = ({ item }) => {
-  const { image, title, description, price, date } = item;
+  const { imageUrl, name, price, date, quantity, shop  } = item;
+
+  const dateTime = new Date(date);
+const dateString = dateTime.toLocaleDateString();
 
   return (
     <div className={styles.history_item}>
-      <img className={styles.item_image} src={image} alt={title} />
+      <img className={styles.item_image} src={imageUrl} alt={name} />
       <div className={styles.item_details}>
-        <h3 className={styles.item_title}>{title}</h3>
-        <p className={styles.item_description}>{description}</p>
+        <h3 className={styles.item_title}>{name}</h3>
+        <p className={styles.item_description}>{shop}</p>
         <p className={styles.item_price}>Price: ${price.toFixed(2)}</p>
-        <p className={styles.item_date}>Date: {date}</p>
+        <p className={styles.item_price}>Quantity: {quantity}</p>
+        <p className={styles.item_date}>Date: {dateString}</p>
       </div>
     </div>
   );

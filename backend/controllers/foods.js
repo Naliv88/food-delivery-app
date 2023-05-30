@@ -118,5 +118,5 @@ module.exports = {
   updateFood,
   addCartFood,
   listCartTrue,
-  addCartFoodFalse
+  addCartFoodFalse,
 };

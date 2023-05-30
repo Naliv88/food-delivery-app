@@ -1,25 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import HistoryItem from '../../components/HistoryItem/HistoryItem';
 // import fetchHistoryData from '../../Axios/AxiosGetHistory';
 import styles from './History.module.css';
+import { NotesContext } from 'context/notesContext';
 
 export const History = () => {
-const historyData=[];
 
-  // const [historyData, setHistoryData] = useState([]);
 
-  // useEffect(() => {
-  //   const fetchHistory = async () => {
-  //     try {
-  //       const data = await fetchHistoryData();
-  //       setHistoryData(data);
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-
-  //   fetchHistory();
-  // }, []);
+  const { historyData } = useContext(NotesContext);
 
   return (
     <div className={styles.history_container}>

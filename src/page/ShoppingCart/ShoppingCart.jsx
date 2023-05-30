@@ -27,7 +27,8 @@ export const ShoppingCart = () => {
 
   const fetchDataAndSetCartItems = useCallback(async () => {
     const cartOrder = await fetchData();
-    const cartsOrderQ = cartOrder.map(({ shop, _id, price, imageUrl }) => ({
+    const cartsOrderQ = cartOrder.map(({ shop, _id, price, imageUrl, name }) => ({
+      name,
       imageUrl,
       shop,
       idFood: _id,

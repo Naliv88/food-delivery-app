@@ -9,6 +9,7 @@ const {
   addCartFoodFalse,
 } = require("../../controllers/foods");
 const { tryCatchWrapper } = require("../../service/catchWrapper");
+const { addHistory, listHistory } = require("../../controllers/history");
 
 const router = express.Router();
 
@@ -29,5 +30,11 @@ router.patch("/cart/:foodId", tryCatchWrapper(addCartFood));
 
 // Update a cart status in false food by ID
 router.put("/cart/:foodId", tryCatchWrapper(addCartFoodFalse));
+
+// Post a history 
+router.post("/history", tryCatchWrapper(addHistory));
+
+// Get a history 
+router.get("/history", tryCatchWrapper(listHistory));
 
 module.exports = router;
