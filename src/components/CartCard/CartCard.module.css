@@ -1,9 +1,8 @@
-
 .cart-card {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 200px;
+  width: 100%;
   padding: 16px;
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -12,14 +11,16 @@
 }
 
 .cart-card-image {
-  width: 100%;
-  max-height: 200px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  margin-bottom: 16px;
+  margin-right: 16px;
 }
-.cart-card_disc{
-    text-align: center;
+
+.cart-card-disc {
+  flex-grow: 1;
 }
+
 .cart-card-name {
   font-size: 18px;
   font-weight: bold;
@@ -60,3 +61,4 @@
 .cart-card-button:focus {
   outline: none;
 }
+

@@ -14,3 +14,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </NotesProvider>
   </React.StrictMode>
 );
+
+// AIzaSyAn6yCYR7-TXsSvS2UfJISAaKdoTzMrIIg  apiKey="ВAIzaSyAn6yCYR7-TXsSvS2UfJISAaKdoTzMrIIg"

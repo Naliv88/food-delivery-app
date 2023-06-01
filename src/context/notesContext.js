@@ -18,7 +18,29 @@ export const NotesProvider = ({ children }) => {
   const [foods, setfoods] = useState([]);
 
     const [historyData, setHistoryData] = useState([]);
-  console.log(currentShop);
+
+    const [address, setAddress] = useState('');
+    const [shouldUpdateHistory, setShouldUpdateHistory] = useState(false);
+
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const history = await fetchHistoryData();
+          setHistoryData(history);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+  
+      if (shouldUpdateHistory) {
+        fetchData();
+        setShouldUpdateHistory(false);
+      }
+    }, [shouldUpdateHistory]);
+
+    const handleSomeEvent = () => {
+      setShouldUpdateHistory(true);
+    };
 
 
   // Виконуємо запит до бази даних для отримання всіх shops при монтуванні компонента
@@ -64,15 +86,6 @@ export const NotesProvider = ({ children }) => {
   }, [currentShop]);
 
 
-  // Оновлюємо фільтрований масив нотаток при зміні рядка пошуку або нотаток
-  // const filteredNotesMemo = useMemo(() => {
-  //   return notes.filter(
-  //     note =>
-  //       note.title.toLowerCase().includes(searchFilter.toLowerCase()) ||
-  //       note.body.toLowerCase().includes(searchFilter.toLowerCase())
-  //   );
-  // }, [searchFilter, notes]);
-
   return (
     <NotesContext.Provider
       value={{
@@ -81,6 +94,10 @@ export const NotesProvider = ({ children }) => {
         currentShop,
         foods,
         historyData,
+        address,
+        setAddress,
+        handleSomeEvent
+        
 
       }} displayName="Context"
     >

@@ -1,12 +1,19 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useContext, useEffect, useState } from 'react';
 import CartCard from '../../components/CartCard/CartCard';
-import fetchCartListFromAPI from '../../Axios/AxiosGetCart';
+import {
+  fetchdeleteFromCart,
+} from '../../Axios/AxiosCart';
 import Customer from 'components/Customer/Customer';
-import fetchdeleteFromCart from '../../Axios/AxiosPutCart';
+import { postHistoryData } from '../../Axios/AxiosHistory';
 
 import styles from './ShoppingCart.module.css';
+import MapContainer from 'components/MapContainer/MapContainer';
+import { CartListFromLocalStorage, removeAllFromCart, removeFromCart } from 'localStorag/storage';
+import { NotesContext } from 'context/notesContext';
 
 export const ShoppingCart = () => {
+  
+  const { handleSomeEvent } = useContext(NotesContext);
   const [cartItems, setCartItems] = useState([]);
   const [order, setOrder] = useState({
     name: '',
@@ -15,28 +22,30 @@ export const ShoppingCart = () => {
     address: '',
   });
 
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     try {
-      const data = await fetchCartListFromAPI();
+      const data = await CartListFromLocalStorage();
       console.log(data);
       return data;
     } catch (error) {
       console.error(error);
     }
-  };
+  }, []);
 
   const fetchDataAndSetCartItems = useCallback(async () => {
     const cartOrder = await fetchData();
-    const cartsOrderQ = cartOrder.map(({ shop, _id, price, imageUrl, name }) => ({
-      name,
-      imageUrl,
-      shop,
-      idFood: _id,
-      quantity: 1,
-      price: price,
-    }));
+    const cartsOrderQ = cartOrder.map(
+      ({ shop, _id, price, imageUrl, name }) => ({
+        name,
+        imageUrl,
+        shop,
+        idFood: _id,
+        quantity: 1,
+        price: price,
+      })
+    );
     setCartItems(cartsOrderQ);
-  }, []);
+  }, [fetchData]);
 
   useEffect(() => {
     fetchDataAndSetCartItems();
@@ -46,9 +55,16 @@ export const ShoppingCart = () => {
     setValue(event.target.value);
   };
 
-  const handleRemoveFromCart = itemId => {
-    setCartItems(prevItems => prevItems.filter(item => item.idFood !== itemId));
-    fetchdeleteFromCart(itemId);
+  const handleRemoveFromCart = async itemId => {
+    try {
+      removeFromCart(itemId);
+      await fetchdeleteFromCart(itemId);
+      setCartItems(prevItems =>
+        prevItems.filter(item => item.idFood !== itemId)
+      );
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const calculateTotalPrice = () => {
@@ -84,16 +100,27 @@ export const ShoppingCart = () => {
     };
 
     setOrder(newOrder);
+    postHistoryData(newOrder);
+
+    setCartItems([]);
+    removeAllFromCart();
+    // handleSomeEvent()
   };
 
   useEffect(() => {
     console.log('Order placed:', order);
+
+    setCartItems([]);
   }, [order]);
 
   return (
     <div>
       <form onSubmit={handleOrder} className={styles.shoppingCart_form}>
         <div>
+          <div className={styles.map}>
+            <MapContainer />
+          </div>
+
           <Customer handleChange={handleChange} order={order} />
         </div>
         <div className={styles.shoppingCart_cart_list}>

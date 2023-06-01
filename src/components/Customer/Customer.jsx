@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import styles from './Customer.module.css';
+import { NotesContext } from 'context/notesContext';
 
 const Customer = ({ handleChange }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [address, setAddress] = useState('');
+  // const [address, setAddress] = useState('');
+  const { address, setAddress } = useContext(NotesContext);
 
   return (
     <div className={styles['customer-container']}>

@@ -56,4 +56,22 @@
     margin-top: 20px;
     color: #888;
   }
+
+  .input_container {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .input_container input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .input_container input:focus {
+    outline: none;
+    border-color: #888;
+  }
   

@@ -4,7 +4,7 @@ const listStore = async (req, res) => {
   try {
     const data = await Food.find();
     const uniqueShops = [...new Set(data.map(food => food.shop))];
-console.log(uniqueShops);
+    
     if (uniqueShops) {
       return res.status(200).json(uniqueShops);
     }
@@ -20,11 +20,10 @@ const getFoodWithStore = async (req, res) => {
   const { shop } = req.params;
 
   try {
-    const data = await Food.find();
-    const filteredFoods = data.filter(food => food.shop === shop);
-
-    if (filteredFoods) {
-      return res.status(200).json(filteredFoods);
+    const data = await Food.find({ shop });
+    
+    if (data.length > 0) {
+      return res.status(200).json(data);
     }
 
     res.status(404).json({ message: 'Not found' });
@@ -34,19 +33,17 @@ const getFoodWithStore = async (req, res) => {
   }
 };
 
-const updateFood = async (req, res, next) => {
-  const body = req.body;
+const updateFood = async (req, res) => {
   const { foodId } = req.params;
+  const body = req.body;
 
   try {
-    const data = await Food.findByIdAndUpdate(
-      { _id: foodId },
-      { ...body },
-      { new: true }
-    );
-    if (data) {
-      return res.status(200).json(data);
+    const updatedFood = await Food.findByIdAndUpdate(foodId, body, { new: true });
+
+    if (updatedFood) {
+      return res.status(200).json(updatedFood);
     }
+
     res.status(404).json({ message: 'Not found' });
   } catch (error) {
     console.error(error);
@@ -75,29 +72,7 @@ const addCartFood = async (req, res) => {
   }
 };
 
-const addCartFoodFalse = async (req, res) => {
-  const { foodId } = req.params;
-
-  try {
-    const food = await Food.findById(foodId);
-
-    if (!food) {
-      return res.status(404).json({ message: 'Food not found' });
-    }
-
-    food.cart = false;
-
-    const updatedFood = await food.save();
-
-    res.status(200).json(updatedFood);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Failed to update cart status' });
-  }
-};
-
 const listCartTrue = async (req, res) => {
-  console.log("object");
   try {
     const filteredFoods = await Food.find({ cart: true });
 
@@ -112,11 +87,20 @@ const listCartTrue = async (req, res) => {
   }
 };
 
+const resetCartStatus = async () => {
+  try {
+    await Food.updateMany({}, { cart: false });
+    console.log('Cart status reset successful');
+  } catch (error) {
+    console.error('Failed to reset cart status:', error);
+  }
+};
+
 module.exports = {
   listStore,
   getFoodWithStore,
   updateFood,
   addCartFood,
   listCartTrue,
-  addCartFoodFalse,
+  resetCartStatus
 };

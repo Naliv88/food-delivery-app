@@ -8,6 +8,8 @@ export const ShopCard = ({ food, onClick }) => {
   const handleCartClick = () => {
     setIsCart(prevstate=> !prevstate);
     onClick(_id);
+    // addToCart(food)
+    // console.log(object);
   };
 
   return (

@@ -3,6 +3,7 @@ import axios from 'axios';
 const fetchHistoryData = async () => {
   try {
     const response = await axios.get('http://localhost:4000/api/foods/history');
+    console.log(response.data);
     return response.data;
   } catch (error) {
     console.log(error.message);

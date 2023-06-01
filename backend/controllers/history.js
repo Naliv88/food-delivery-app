@@ -1,11 +1,16 @@
 const History = require('../models/historyModel');
+const Food = require('../models/foodModel');
+
 
 const addHistory = async (req, res) => {
   const historyItems = req.body;
-
   try {
-    const createdItems = await History.create(
-      historyItems.map(item => ({
+    const createdItems = await History.create({
+      address: historyItems.address,
+      email: historyItems.email,
+      name: historyItems.name,
+      phone: historyItems.phone,
+      items: historyItems.orders.map(item => ({
         name: item.name,
         price: item.price,
         shop: item.shop,
@@ -13,13 +18,13 @@ const addHistory = async (req, res) => {
         quantity: item.quantity,
         idFood: item.idFood,
         date: Date.now(),
-      }))
-    );
-
+      })),
+    });
     res.status(201).send(createdItems);
+    console.log(createdItems);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "Failed to create history items" });
+    res.status(500).json({ message: 'Failed to create history items' });
   }
 };
 
@@ -40,8 +45,5 @@ const listHistory = async (req, res) => {
 
 module.exports = {
   addHistory,
-  listHistory
+  listHistory,
 };
-
-
-
