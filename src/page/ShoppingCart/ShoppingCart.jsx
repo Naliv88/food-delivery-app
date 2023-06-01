@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import CartCard from '../../components/CartCard/CartCard';
 import {
   fetchdeleteFromCart,
@@ -9,11 +9,11 @@ import { postHistoryData } from '../../Axios/AxiosHistory';
 import styles from './ShoppingCart.module.css';
 import MapContainer from 'components/MapContainer/MapContainer';
 import { CartListFromLocalStorage, removeAllFromCart, removeFromCart } from 'localStorag/storage';
-import { NotesContext } from 'context/notesContext';
+// import { NotesContext } from 'context/notesContext';
 
 export const ShoppingCart = () => {
   
-  const { handleSomeEvent } = useContext(NotesContext);
+  // const { handleSomeEvent } = useContext(NotesContext);
   const [cartItems, setCartItems] = useState([]);
   const [order, setOrder] = useState({
     name: '',
