@@ -3,7 +3,7 @@ import SharedLayout from './SharedLayout/SharedLayout';
 import { Shop } from 'page/Shop/Shop';
 import { ShoppingCart } from 'page/ShoppingCart/ShoppingCart';
 import { History } from 'page/History/History';
-import { Coupons } from 'page/Coupons/Coupons';
+import  Coupons  from 'page/Coupons/Coupons';
 
 function App() {
   return (

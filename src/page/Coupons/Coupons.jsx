@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './Coupons.module.css';
 import  CouponItem  from '../../components/CouponItem/CouponItem';
 
-export const Coupons = () => {
+const Coupons = () => {
   const coupons = [
     {
       id: 1,
@@ -44,3 +44,5 @@ export const Coupons = () => {
     </div>
   );
 };
+
+export default Coupons;
