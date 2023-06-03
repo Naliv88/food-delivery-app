@@ -22,8 +22,8 @@ export const RightSideShop = () => {
   return (
     <div className={styles.rightSideShop}>
       <ul className={styles.list}>
-        {foods.map(food => (
-          <li key={food._id}>
+        {foods.map((food, index) => (
+          <li key={index}>
             <ShopCard food={food} onClick={() => handleCart(food._id)} />
           </li>
         ))}

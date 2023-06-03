@@ -25,7 +25,6 @@ export const ShoppingCart = () => {
   const fetchData = useCallback(async () => {
     try {
       const data = await CartListFromLocalStorage();
-      console.log(data);
       return data;
     } catch (error) {
       console.error(error);

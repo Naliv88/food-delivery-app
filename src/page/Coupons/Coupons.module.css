@@ -1,0 +1,14 @@
+.couponsContainer {
+    text-align: center;
+  }
+  
+  .couponItem {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+ 

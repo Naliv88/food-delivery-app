@@ -26,7 +26,8 @@ export const NotesProvider = ({ children }) => {
       const fetchData = async () => {
         try {
           const history = await fetchHistoryData();
-          setHistoryData(history);
+          if (history){
+          setHistoryData(history);}
         } catch (error) {
           console.error(error);
         }
@@ -59,7 +60,8 @@ export const NotesProvider = ({ children }) => {
     const fetchHistory = async () => {
       try {
         const history = await fetchHistoryData()
-        setHistoryData(history)
+        if (history){
+          setHistoryData(history);}
         
       } catch (error) {
         console.error(error);

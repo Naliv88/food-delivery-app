@@ -9,6 +9,8 @@ export const History = () => {
   const [phoneFilter, setPhoneFilter] = useState('');
   const [filteredHistory, setFilteredHistory] = useState([]);
 
+
+
   useEffect(() => {
     const filteredData = historyData.filter((item) =>
       item.email.includes(emailFilter)
@@ -28,6 +30,8 @@ export const History = () => {
     });
   }, [historyData, phoneFilter, emailFilter]);
 
+
+  console.log(filteredHistory);
   return (
     <div className={styles.history_container}>
       <h1>Order History</h1>
