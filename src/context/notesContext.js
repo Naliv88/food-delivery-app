@@ -96,6 +96,7 @@ export const NotesProvider = ({ children }) => {
         currentShop,
         foods,
         historyData,
+        setHistoryData,
         address,
         setAddress,
         handleSomeEvent

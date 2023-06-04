@@ -2,12 +2,30 @@ import React, { useContext, useState, useEffect } from 'react';
 import { HistoryOrders } from '../../components/HistoryOrders/HistoryOrders';
 import styles from './History.module.css';
 import { NotesContext } from 'context/notesContext';
+import { fetchHistoryData } from 'Axios/AxiosHistory';
 
 export const History = () => {
-  const { historyData } = useContext(NotesContext);
+  const { historyData, setHistoryData } = useContext(NotesContext);
   const [emailFilter, setEmailFilter] = useState('');
   const [phoneFilter, setPhoneFilter] = useState('');
   const [filteredHistory, setFilteredHistory] = useState([]);
+
+  useEffect(() => {
+
+    const fetchHistory = async () => {
+      try {
+        const history = await fetchHistoryData()
+        if (history){
+          setHistoryData(history);}
+        
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    
+    fetchHistory();
+    // eslint-disable-next-line
+  }, []);
 
 
 
@@ -31,7 +49,6 @@ export const History = () => {
   }, [historyData, phoneFilter, emailFilter]);
 
 
-  console.log(filteredHistory);
   return (
     <div className={styles.history_container}>
       <h1>Order History</h1>
