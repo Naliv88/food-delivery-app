@@ -1,12 +1,11 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, {  useState, useEffect } from 'react';
 import { HistoryOrders } from '../../components/HistoryOrders/HistoryOrders';
 import styles from './History.module.css';
-import { NotesContext } from 'context/notesContext';
 import { fetchHistoryData } from 'Axios/AxiosHistory';
 
 export const History = () => {
-  const { historyData, setHistoryData } = useContext(NotesContext);
   const [emailFilter, setEmailFilter] = useState('');
+  const [historyData, setHistoryData] = useState([]);
   const [phoneFilter, setPhoneFilter] = useState('');
   const [filteredHistory, setFilteredHistory] = useState([]);
 
