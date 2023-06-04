@@ -1,7 +1,7 @@
 import React, {  useState, useEffect } from 'react';
 import { HistoryOrders } from '../../components/HistoryOrders/HistoryOrders';
 import styles from './History.module.css';
-import { fetchHistoryData } from 'Axios/AxiosHistory';
+import { fetchHistoryData } from '../../Axios/AxiosHistory';
 
 export const History = () => {
   const [emailFilter, setEmailFilter] = useState('');
